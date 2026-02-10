@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/gKKp3Cl.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Server Makers | Cennik i Wycena</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        #loader {
+            position: fixed; inset: 0; z-index: 9999; background: #0f172a;
+            display: flex; justify-content: center; align-items: center;
+            transition: opacity 0.5s ease-out, visibility 0.5s;
+        }
+        .loader-circle {
+            width: 50px; height: 50px; border: 5px solid #1e293b;
+            border-top: 5px solid #3b82f6; border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .loaded #loader { opacity: 0; visibility: hidden; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <div id="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="https://i.imgur.com/gKKp3Cl.png" alt="Logo" class="h-10 w-auto">
+                <span class="text-xl font-bold tracking-tight text-slate-800 hidden sm:block">Pro Server <span class="text-blue-600">Makers</span></span>
+            </a>
+            
+            <div class="flex items-center space-x-6 md:space-x-8">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 transition text-xs font-bold uppercase tracking-widest">Główna</a>
+                <a href="#services" class="text-slate-600 hover:text-blue-600 transition text-xs font-bold uppercase tracking-widest">Cennik</a>
+                <a href="portfolio.html" class="text-slate-600 hover:text-blue-600 transition text-xs font-bold uppercase tracking-widest">Portfolio</a>
+                
+                <a href="#contact" class="px-5 py-2.5 bg-blue-600 text-white rounded-full hover:bg-blue-700 shadow-md shadow-blue-200 transition text-xs font-bold uppercase tracking-widest flex items-center justify-center">
+                    Poproś o wycenę
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-40 pb-24 gradient-bg text-white relative overflow-hidden text-center">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/></pattern></defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10" data-aos="fade-down">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">Profesjonalne serwery <br><span class="text-blue-400">i strony WWW.</span></h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl mx-auto">Wycena przez formularz, realizacja i wsparcie bezpośrednio na Discordzie.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="portfolio.html" class="px-10 py-4 bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-900/40">Zobacz Portfolio</a>
+                <a href="TU_LINK_DO_DISCORDA" target="_blank" class="px-10 py-4 bg-indigo-600 rounded-xl font-bold hover:bg-indigo-700 transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-900/40">
+                    <i class="fa-brands fa-discord text-xl"></i> Dołącz do Discorda
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 italic uppercase tracking-tighter">Orientacyjny Cennik</h2>
+                <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-cube text-xl text-green-600"></i>
+                        <h3 class="font-bold uppercase text-sm tracking-widest">Minecraft</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs text-slate-600">
+                        <li class="flex justify-between border-b pb-2"><span>Gotowy serwer</span> <b class="text-slate-900">35–70 zł</b></li>
+                        <li class="flex justify-between border-b pb-2"><span>Konfiguracja pluginu</span> <b class="text-slate-900">2–8 zł</b></li>
+                        <li class="flex justify-between border-b pb-2"><span>Skrypt</span> <b class="text-slate-900">8–20 zł</b></li>
+                        <li class="flex justify-between"><span>Plugin na zamówienie</span> <b class="text-slate-900">15–45 zł</b></li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-brands fa-discord text-xl text-indigo-600"></i>
+                        <h3 class="font-bold uppercase text-sm tracking-widest">Discord</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs text-slate-600">
+                        <li class="flex justify-between border-b pb-2"><span>Serwer podstawowy</span> <b class="text-slate-900">10 zł</b></li>
+                        <li class="flex justify-between border-b pb-2"><span>Ticket + automatyzacje</span> <b class="text-slate-900">20 zł</b></li>
+                        <li class="flex justify-between"><span>Serwer na gotowo</span> <b class="text-slate-900">35 zł</b></li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-globe text-xl text-blue-600"></i>
+                        <h3 class="font-bold uppercase text-sm tracking-widest">Strony WWW</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs text-slate-600">
+                        <li class="flex justify-between border-b pb-2"><span>Strona wizytówka</span> <b class="text-slate-900">50–120 zł</b></li>
+                        <li class="flex justify-between border-b pb-2"><span>Landing Page</span> <b class="text-slate-900">40–90 zł</b></li>
+                        <li class="flex justify-between"><span>Sklep / Skomplikowane</span> <b class="text-slate-900">Wycena</b></li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-plus text-xl text-orange-600"></i>
+                        <h3 class="font-bold uppercase text-sm tracking-widest">Dodatki</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs text-slate-600">
+                        <li class="flex justify-between border-b pb-2"><span>Logo / Grafika</span> <b class="text-slate-900">4–12 zł</b></li>
+                        <li class="flex justify-between border-b pb-2"><span>Ekspresowa realizacja</span> <b class="text-slate-900">+7 zł</b></li>
+                        <li class="flex justify-between"><span>Montaż wideo</span> <b class="text-slate-900">Indywidualnie</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6 italic text-blue-600">Jak zamówić?</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold">1</div>
+                            <p class="text-slate-600 text-sm">Wypełnij formularz wyceny obok, aby otrzymać wstępną <b>wycenę</b> na e-mail.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold">2</div>
+                            <p class="text-slate-600 text-sm">Otwórz <b>Ticket</b> na naszym serwerze Discord, podając szczegóły wyceny.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold">3</div>
+                            <p class="text-slate-600 text-sm">Dokonaj płatności i ciesz się gotowym projektem!</p>
+                        </div>
+                    </div>
+                    <div class="mt-10 p-4 bg-white rounded-xl border border-slate-200">
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-3">Płatności:</p>
+                        <div class="flex gap-4 text-slate-600 italic text-xs">
+                            <span>BLIK</span> <span>PayPal</span> <span>PSC</span> <span>IceHost</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-xl" data-aos="fade-left">
+                    <form action="https://formspree.io/f/xqedzvbz" method="POST" class="space-y-4">
+                        <input type="email" name="email" required placeholder="Twój E-mail" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500">
+                        <textarea name="message" required rows="5" placeholder="Opisz swój projekt..." class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        <button type="submit" class="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition uppercase tracking-widest text-xs">Wyślij do wyceny</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-900 text-slate-400 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-[10px] uppercase tracking-[0.2em] mb-2 opacity-50">&copy; 2026 Pro Server Makers. Design & Code by Exsi390.</p>
+            <p class="text-[10px] uppercase tracking-widest opacity-30">Finalizacja zamówień i wsparcie odbywa się wyłącznie przez Discord.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        window.addEventListener('load', () => { setTimeout(() => { document.body.classList.add('loaded'); }, 500); });
+    </script>
+</body>
+</html>

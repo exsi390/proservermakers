@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Server Makers | Portfolio</title>
+	<link rel="icon" type="image/png" href="https://i.imgur.com/gKKp3Cl.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        #loader {
+            position: fixed; inset: 0; z-index: 9999; background: #0f172a;
+            display: flex; justify-content: center; align-items: center;
+            transition: opacity 0.5s ease-out, visibility 0.5s;
+        }
+        .loader-circle {
+            width: 50px; height: 50px; border: 5px solid #1e293b;
+            border-top: 5px solid #3b82f6; border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .loaded #loader { opacity: 0; visibility: hidden; }
+        .creator-card:hover { border-color: #3b82f6; transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <div id="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="https://i.imgur.com/gKKp3Cl.png" alt="Pro Server Makers Logo" class="h-12 w-auto">
+                <span class="text-xl font-bold tracking-tight text-slate-800 hidden sm:block">Pro Server <span class="text-blue-600">Makers</span></span>
+            </a>
+            <div class="flex space-x-8 font-semibold text-sm uppercase tracking-wide">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 transition">Powrót</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 gradient-bg text-white relative">
+        <div class="max-w-7xl mx-auto px-4 text-center" data-aos="zoom-in">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 italic">Nasi Twórcy</h1>
+            <p class="text-slate-300 text-lg">Eksperci od pluginów, skryptów i oprawy wizualnej.</p>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 creator-card relative" data-aos="fade-right">
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-code text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">_Exsi390</h3>
+                        <p class="text-blue-600 font-medium text-sm mb-4 italic">ALL Developer</p>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Specjalista od zaawansowanych systemów serwerowych i autorskich rozwiązań programistycznych.
+                        </p>
+                        <div class="space-y-3">
+                            <a href="https://exsi390.github.io/Portfolio/" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition text-sm font-bold">
+                                <i class="fa-solid fa-briefcase"></i> Zobacz Portfolio
+                            </a>
+                            <div class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="text-sm text-slate-700 font-mono"><i class="fa-brands fa-discord text-blue-500 mr-2"></i>exsi390</span>
+                                <button onclick="copyToClipboard('exsi390')" class="text-xs font-bold text-blue-600 uppercase">Kopiuj</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 creator-card relative" data-aos="fade-left">
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-terminal text-2xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">BAD</h3>
+                        <p class="text-indigo-600 font-medium text-sm mb-4 italic">Developer & Designer</p>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Twórca wszechstronny, dbający o techniczne aspekty projektów oraz ich unikalną prezentację.
+                        </p>
+                        <div class="space-y-3">
+                            <a href="https://ishqqn.github.io/Bad-Portfolio/" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition text-sm font-bold">
+                                <i class="fa-solid fa-briefcase"></i> Zobacz Portfolio
+                            </a>
+                            <div class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="text-sm text-slate-700 font-mono"><i class="fa-brands fa-discord text-indigo-500 mr-2"></i>ishqqn</span>
+                                <button onclick="copyToClipboard('ishqqn')" class="text-xs font-bold text-indigo-600 uppercase">Kopiuj</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-8">Nasze wspólne projekty</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-6 py-3 bg-white rounded-full shadow-sm text-sm font-semibold border border-slate-200">Pro Server Makers</span>
+                <span class="px-6 py-3 bg-white rounded-full shadow-sm text-sm font-semibold border border-slate-200">PlumMc.pl</span>
+                <span class="px-6 py-3 bg-white rounded-full shadow-sm text-sm font-semibold border border-slate-200">Autorskie Strony</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-900 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs">
+            <p>&copy; 2026 Pro Server Makers. Design & Code by Exsi390.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        window.addEventListener('load', () => {
+            setTimeout(() => { document.body.classList.add('loaded'); }, 500);
+        });
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert("Skopiowano nick Discord: " + text);
+        }
+    </script>
+</body>
+</html>
